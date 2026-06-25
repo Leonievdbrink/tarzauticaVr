@@ -942,11 +942,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: ec131e90-6422-4025-8c8e-93d571310e76
+  cloudProjectId: d112c705-feb7-4abc-8c67-29c698a1ad27
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: My project 2026-02-12_12-39-47
-  organizationId: leonievdb
+  projectName: Tarzautica
+  organizationId: tessabunt2
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
