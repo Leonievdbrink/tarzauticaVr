@@ -74,3 +74,8 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 Assets/GeniusCrate_Games/Bedroom_Set/Model/Bedroom_Set/Bed-03.fbx
+/Packages
+.bezisidekick/.settings.json
+.bezisidekick/.user-settings.json
+Packages/packages-lock.json
+/Packages
