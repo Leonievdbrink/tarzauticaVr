@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Samples/XR Interaction Toolkit/3.3.1/Starter Assets/DemoScene.unity
     guid: 319dafa5c80f29f428dc1e0d03f04177
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/leoscene.unity
     guid: da4467f7e560211419cf688e7593b472
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RickIsCool.unity
     guid: 7bd13508b290f5148acf72f6b6247f14
   m_configObjects:
