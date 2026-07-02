@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -26,6 +26,10 @@ public class Countdown : MonoBehaviour
 
     [Tooltip("Hoe lang er gewacht moet worden voordat de scene herladen wordt")]
     public float waitTimeBeforeReload = 5f;
+
+    [Header("Scene opties")]
+    [Tooltip("De naam van de scene die geladen wordt als de timer klaar is. Leeg = huidige scene herladen.")]
+    public string sceneToLoadOnEnd = "MainMenu";
 
     [Header("Text opties")]
     [Tooltip("Hier moet je het tekst gameobject in slepen.")]
@@ -83,8 +87,15 @@ public class Countdown : MonoBehaviour
     private IEnumerator WaitAndLoadScene()
     {
         yield return new WaitForSecondsRealtime(waitTimeBeforeReload);
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex);
 
+        if (!string.IsNullOrEmpty(sceneToLoadOnEnd))
+        {
+            SceneManager.LoadScene(sceneToLoadOnEnd);
+        }
+        else
+        {
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentSceneIndex);
+        }
     }
 }
