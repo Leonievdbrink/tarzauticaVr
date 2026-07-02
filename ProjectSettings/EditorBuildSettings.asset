@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: 975b934c8c706384f9c6dbf2daf51257
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TessaScene.unity
     guid: faa3dd9c908145f409afe98efa1d9079
   - enabled: 0

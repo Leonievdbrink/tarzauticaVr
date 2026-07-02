@@ -5,6 +5,9 @@ using UnityEngine;
 public class CollisionDetecter : MonoBehaviour
 {
 
+    public Timer StartTimer;
+    public Timer EndTimer;
+
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log(collision.gameObject.name + " Collision enter");
@@ -13,6 +16,9 @@ public class CollisionDetecter : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.gameObject.name + " Trigger enter");
+        // stop de timers
+        StopTimers();
+        
     }
     
     private void OnCollisionExit(Collision collision)
@@ -34,5 +40,11 @@ public class CollisionDetecter : MonoBehaviour
     {
         Debug.Log(other.gameObject.name + " Trigger stay");
     }
-    
+
+    public void StopTimers()
+    {
+       StartTimer.PauseTimer();
+         EndTimer.PauseTimer();
+    }
+
 }

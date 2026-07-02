@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     public bool useTimeLimit = false;
     public float timeLimitSeconds = 300f;
     [Tooltip("Hoelang het eindscherm/score blijft staan voordat je teruggaat naar het menu")]
-    public float returnToMenuDelay = 4f;
+    public float returnToMenuDelay = 0.1f;
 
     public GameState CurrentState { get; private set; } = GameState.Menu;
     public float ElapsedTime { get; private set; }
@@ -132,6 +132,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator ReturnToMenuAfterDelay(float delay)
     {
+        delay = Mathf.Max(0f, delay);
         yield return new WaitForSeconds(delay);
         GoToMenu();
     }
