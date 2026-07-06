@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class Countdown : MonoBehaviour
 {
@@ -35,6 +36,10 @@ public class Countdown : MonoBehaviour
     [Tooltip("Hier moet je het tekst gameobject in slepen.")]
     public TextMeshProUGUI text;
 
+    [Header("Events")]
+    [Tooltip("Wordt aangeroepen zodra de timer op 0 staat")]
+    public UnityEvent onTimerEnd;
+
 
     private void Start()
     {
@@ -54,11 +59,12 @@ public class Countdown : MonoBehaviour
         if (text != null)
             text.text = wholeNumbersOnly ? timer.ToString("0") : timer.ToString("F2") ;
 
-        if(timer <= 0)
+        if (timer <= 0)
         {
             timer = 0;
             isRunning = false;
-            if(reloadSceneOnEnd)
+            onTimerEnd?.Invoke();
+            if (reloadSceneOnEnd)
                 OnTimerEnded();
         }
     }
